@@ -46,7 +46,7 @@ public class UserController extends ExtendedModelMap {
 
 	@RequestMapping("/createUser")
 	public ModelAndView createUser(@RequestParam("userName") String name, @RequestParam("password") String password,
-			@RequestParam("email") String email, @RequestParam("mobileNumber") String mobileNumber) {
+			@RequestParam("email") String email, @RequestParam("MobileNumber") String mobileNumber) {
 		User user = new User(name, password, email, mobileNumber);
 		User userObj=userService.getUserObj(email);
 		if(userObj!=null) {
